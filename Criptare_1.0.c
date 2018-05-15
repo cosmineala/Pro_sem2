@@ -11,7 +11,7 @@ int main()
     int p , a ;
     
     //----mem
-    char *st_afisare = NULL;
+    
     char *st_citire;
     char c = 'a';
     int j = 1;
@@ -36,7 +36,7 @@ int main()
     
     st_citire[ j-1 ] = '\0';
     
-    st_afisare = (char*)malloc( j * sizeof(char));
+    
     
     
     
@@ -76,7 +76,7 @@ int main()
     
     a-=10;
     
-    st_afisare[0]=st_citire[0];
+    
     
     for ( i = 1; i < strlen(st_citire); i++) {
         
@@ -87,33 +87,33 @@ int main()
             if ( p >= 0 && p <= 9 ) {/*--------rand 1*/
                 if ( p + a > 9 ) {
                     p = p + a - 10;
-                    st_afisare[i] = (char)(trans_mum_asci[p] + 97);
+                    st_citire[i] = (char)(trans_mum_asci[p] + 97);
                 }
                 else{
                     p = p + a;
-                    st_afisare[i] = (char)(trans_mum_asci[p] + 97);}
+                    st_citire[i] = (char)(trans_mum_asci[p] + 97);}
                 
             }
             else{
                 if ( p >= 10 && p <= 18 ) {//------rand 2
                     if ( p + a > 18) {
                         p = p + a - 9;
-                        st_afisare[i] = (char)(trans_mum_asci[p] + 97);
+                        st_citire[i] = (char)(trans_mum_asci[p] + 97);
                     }
                     else{
                         p = p + a;
-                        st_afisare[i] = (char)(trans_mum_asci[p] + 97);
+                        st_citire[i] = (char)(trans_mum_asci[p] + 97);
                     }
                 }
                 else{
                     if ( p >= 19 && p <= 25 ) {//------rand 3
                         if ( p + a > 25) {
                             p = p + a - 7;
-                            st_afisare[i] = (char)(trans_mum_asci[p] + 97);
+                            st_citire[i] = (char)(trans_mum_asci[p] + 97);
                         }
                         else{
                             p = p + a;
-                            st_afisare[i] = (char)(trans_mum_asci[p] + 97);
+                            st_citire[i] = (char)(trans_mum_asci[p] + 97);
                         }
                     }
                 }
@@ -130,33 +130,33 @@ int main()
                 if ( p >= 0 && p <= 9 ) {/*--------rand 1*/
                     if ( p + a > 9 ) {
                         p = p + a - 10;
-                        st_afisare[i] = (char)(trans_mum_asci[p] + 65);
+                        st_citire[i] = (char)(trans_mum_asci[p] + 65);
                     }
                     else{
                         p = p + a;
-                        st_afisare[i] = (char)(trans_mum_asci[p] + 65);}
+                        st_citire[i] = (char)(trans_mum_asci[p] + 65);}
                     
                 }
                 else{
                     if ( p >= 10 && p <= 18 ) {//------rand 2
                         if ( p + a > 18) {
                             p = p + a - 9;
-                            st_afisare[i] = (char)(trans_mum_asci[p] + 65);
+                            st_citire[i] = (char)(trans_mum_asci[p] + 65);
                         }
                         else{
                             p = p + a;
-                            st_afisare[i] = (char)(trans_mum_asci[p] + 65);
+                            st_citire[i] = (char)(trans_mum_asci[p] + 65);
                         }
                     }
                     else{
                         if ( p >= 19 && p <= 25 ) {//------rand 3
                             if ( p + a > 25) {
                                 p = p + a - 7;
-                                st_afisare[i] = (char)(trans_mum_asci[p] + 65);
+                                st_citire[i] = (char)(trans_mum_asci[p] + 65);
                             }
                             else{
                                 p = p + a;
-                                st_afisare[i] = (char)(trans_mum_asci[p] + 65);
+                                st_citire[i] = (char)(trans_mum_asci[p] + 65);
                             }
                         }
                     }
@@ -164,16 +164,12 @@ int main()
                 
                 
             }/*--------------------------------end-literemari*/
-            else{
-                
-                
-                st_afisare[i] = st_citire[i];
-            }
+            
         }
         
     }                     // for-end
     
-    printf(" \n%s\n",st_afisare);
+    printf(" \n%s\n",st_citire);
     
     free(st_citire);
     return 0;
